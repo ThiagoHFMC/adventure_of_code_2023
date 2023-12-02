@@ -8,10 +8,6 @@ list_two = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 enum_numbers = dict(zip(list_one, list_two))
 
-def map_string_to_number(substring):
-    if substring in list_one:
-        return int(enum_numbers['one'])
-
 for line in lines:
     for number in enum_numbers.keys():
         line = line.replace(number, number[0] + str(enum_numbers[number]) + number[-1])
